@@ -39,7 +39,7 @@ function Products({cart, increaseQuantity, decreaseQuantity}) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products").then(
+    fetch("https://602fc537a1e9d20017af105e.mockapi.io/api/v1/products").then(
       function (res) {
         return res.json();
       }

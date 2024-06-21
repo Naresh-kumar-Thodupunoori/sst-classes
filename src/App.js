@@ -3,6 +3,7 @@ import './App.css';
 import { a, b } from './components/Products/Products';
 import Products from './components/Products/Products';
 import useWindowDimensions from './components/hooks/useWindowDimensions';
+import CartContext from './components/context/CartContext';
 function App() {
   console.log(a, b);
   const windowSize = useWindowDimensions();
@@ -32,13 +33,14 @@ function App() {
     
     newCart[product.id].quantity--;
 
-    if (newCart[product.id].quantity == 0) {
+    if (newCart[product.id].quantity === 0) {
       delete newCart[product.id];
     }
     setCart(newCart);
   };
   return (
-    <div className="App">
+    <CartContext.Provider value={{cart,increaseQuantity,decreaseQuantity}}>
+      <div className="App">
       <Products
         cart={cart}
         increaseQuantity={increaseQuantity}
@@ -47,6 +49,7 @@ function App() {
       <div>Current Width: {window.innerWidth} </div>
       <div>Current Height: {window.innerHeight} </div>
     </div>
+    </CartContext.Provider>
   );
 }
 
