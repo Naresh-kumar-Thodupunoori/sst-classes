@@ -1,4 +1,3 @@
-
 import ProductCard from "../ProductCard/ProductCard";
 import Effect from "../Effect/Effect";
 import React from "react";
@@ -44,7 +43,7 @@ function Products() {
   console.log("products")
   console.log(useWindowSize());
   useEffect(() => {
-    fetch("https://run.mocky.io/v3/0912a49d-ab8c-4aa2-9363-d1d21fd3f66a").then(
+    fetch("https://run.mocky.io/v3/1c9a787b-3e6b-4fc2-9460-f908e2e3cc29").then(
       (response) => {
         return response.json();
       }
@@ -256,14 +255,3 @@ export default React.memo(Products);
 // change title 2 to 4
 // change title 3 2
 // add product card with key 3 and title 3
-
-// Javascript XML 
-
-//ProductCard(title)
-//named export 
-//default export
-// One default export
-// multiple named exports
-
-
-//product card with key i4 and title 4 has to be added from checking the dom and virtual dom
