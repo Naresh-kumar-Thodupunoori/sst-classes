@@ -3,7 +3,7 @@ import { a, b } from './components/Products/Products';
 import Products from './components/Products/Products';
 import { useState } from 'react';
 import CartContext from './context/CartContext';
-import Cart from './components/Cart/cart';
+import Cart from './components/Cart';
 function App() {
   // state variable
   // inc
@@ -35,10 +35,10 @@ function App() {
 
   console.log(a, b);
   return (
-    <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity }}>
+    <CartContext.Provider value={{ cart, increaseQuantity, decreaseQuantity}}>
       <div className="App">
-        <Products  />
-        <Cart/>
+        <Products />
+        <Cart />
       </div>
     </CartContext.Provider>
   );
@@ -67,10 +67,10 @@ export default App;
 // way to consume the state
 
 
-//  Provider -> the global state is provided by provider
+//  Provider
 //  Store
-    // State -> the global state we want to manage
-    // Reducer -> The way to update the state
-// Action -> makes an action
-// Dispatcher -> dispatcher tells the reducer that the action has been done
-// Selectors -> it helps to use the state
+    // State
+    // Reducer
+// Action
+// Dispatcher
+// Selectors
